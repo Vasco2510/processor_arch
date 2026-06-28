@@ -1,0 +1,258 @@
+$date
+	Fri Jun 26 00:03:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_programa_rvc1 $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 ! PCF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_programa_rvc1 $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 " InstrF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_programa_rvc1 $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 32 # InstrD [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_programa_rvc1 $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ifs $end
+$var wire 1 $ IsCompressedF $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1$
+b0 #
+b10100001000000010010011 "
+b0 !
+$end
+#25
+b1100010000000100010011 "
+b10100001000000010010011 #
+b10 !
+#35
+b1000001000000010110011 "
+b100 !
+b1100010000000100010011 #
+#45
+b10100001000000010010011 "
+b1000001000000010110011 #
+b110 !
+#55
+b1100010000000100010011 "
+b1000 !
+b10100001000000010010011 #
+#65
+b1000001000000010110011 "
+b1100010000000100010011 #
+b1010 !
+#75
+b1100011 "
+0$
+b1100 !
+b1000001000000010110011 #
+#85
+x$
+bx "
+b1100011 #
+b10000 !
+#95
+b10xx0 !
+bx #
+#105
+0$
+b1100011 "
+b0 #
+b1100 !
+#115
+x$
+bx "
+b10000 !
+b1100011 #
+#125
+bx #
+b10xx0 !
+#135
+0$
+b1100011 "
+b1100 !
+b0 #
+#145
+x$
+bx "
+b1100011 #
+b10000 !
+#155
+b10xx0 !
+bx #
+#165
+0$
+b1100011 "
+b0 #
+b1100 !
+#175
+x$
+bx "
+b10000 !
+b1100011 #
+#185
+bx #
+b10xx0 !
+#195
+0$
+b1100011 "
+b1100 !
+b0 #
+#205
+x$
+bx "
+b1100011 #
+b10000 !
+#215
+b10xx0 !
+bx #
+#225
+0$
+b1100011 "
+b0 #
+b1100 !
+#235
+x$
+bx "
+b10000 !
+b1100011 #
+#245
+bx #
+b10xx0 !
+#255
+0$
+b1100011 "
+b1100 !
+b0 #
+#265
+x$
+bx "
+b1100011 #
+b10000 !
+#275
+b10xx0 !
+bx #
+#285
+0$
+b1100011 "
+b0 #
+b1100 !
+#295
+x$
+bx "
+b10000 !
+b1100011 #
+#305
+bx #
+b10xx0 !
+#315
+0$
+b1100011 "
+b1100 !
+b0 #
+#325
+x$
+bx "
+b1100011 #
+b10000 !
+#335
+b10xx0 !
+bx #
+#345
+0$
+b1100011 "
+b0 #
+b1100 !
+#355
+x$
+bx "
+b10000 !
+b1100011 #
+#365
+bx #
+b10xx0 !
+#375
+0$
+b1100011 "
+b1100 !
+b0 #
+#385
+x$
+bx "
+b1100011 #
+b10000 !
+#395
+b10xx0 !
+bx #
+#405
+0$
+b1100011 "
+b0 #
+b1100 !
+#415
+x$
+bx "
+b10000 !
+b1100011 #
+#425
+bx #
+b10xx0 !
+#435
+0$
+b1100011 "
+b1100 !
+b0 #
+#445
+x$
+bx "
+b1100011 #
+b10000 !
+#455
+b10xx0 !
+bx #
+#465
+0$
+b1100011 "
+b0 #
+b1100 !
+#475
+x$
+bx "
+b10000 !
+b1100011 #
+#485
+bx #
+b10xx0 !
+#495
+0$
+b1100011 "
+b1100 !
+b0 #
+#500

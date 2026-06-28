@@ -1,0 +1,183 @@
+$date
+	Sun Jun 28 17:15:40 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 ! PCF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 " InstrF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 32 # InstrD [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ifs $end
+$var wire 1 $ IsCompressedF $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 % ALUResultE [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 & \rf[8] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 ' \rf[9] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 ( \rf[10] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 ) \rf[11] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_isa_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 * \rf[12] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 *
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+0$
+b0 #
+b1010000110111 "
+b0 !
+$end
+#25
+b1100000001000000010000010011 "
+b1010000110111 #
+b100 !
+#35
+1$
+b11101001000010010010011 "
+b1000000000000 %
+b1000 !
+b1100000001000000010000010011 #
+#45
+b101001010000010100010011 "
+b1000011000000 %
+b11101001000010010010011 #
+b1010 !
+#55
+b101001000010000000100011 "
+b111 %
+b1100 !
+b101001010000010100010011 #
+#60
+b1000000000000 &
+#65
+b1000010010110000011 "
+b1010 %
+b101001000010000000100011 #
+b1110 !
+#70
+b1000011000000 &
+#75
+b1000000010000000100010011 "
+b1000011000000 %
+b10000 !
+b1000010010110000011 #
+#80
+b111 '
+#85
+b100000000010010010000100011 "
+b1000000010000000100010011 #
+b10010 !
+#90
+b1010 (
+#95
+b10010011000000011 "
+b10000 %
+b10100 !
+b100000000010010010000100011 #
+#105
+bx "
+x$
+b1011000 %
+b10010011000000011 #
+b10110 !
+#110
+bx )
+#115
+b10000 %
+b110x0 !
+bx #
+#125
+bx %
+bx !
+#140
+bx *
+#1500

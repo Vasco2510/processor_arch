@@ -1,0 +1,132 @@
+$date
+	Sun Jun 28 17:15:38 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_test_branch_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 ! PCF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_branch_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 " InstrF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_branch_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 32 # InstrD [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_branch_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ifs $end
+$var wire 1 $ IsCompressedF $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_branch_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 2 % PCSrcE [1:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_branch_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module exs $end
+$var reg 1 & branchCond $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_branch_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module exs $end
+$var wire 32 ' PCTargetE [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+1&
+b0 %
+1$
+b0 #
+b101000000010000010011 "
+b0 !
+$end
+#25
+b1001000010010010011 "
+b101000000010000010011 #
+b10 !
+#35
+b1001000001001100011 "
+b100 !
+b1001000010010010011 #
+b1 '
+#45
+b11101010000010100010011 "
+b10 '
+b1001000001001100011 #
+b110 !
+#55
+b1000001001001100011 "
+b1 %
+b1000 !
+b11101010000010100010011 #
+b1000 '
+#65
+b0 %
+b0 '
+b0 #
+#75
+b11101011000010110010011 "
+b1010 !
+b1000001001001100011 #
+#85
+b1 %
+b101100000011000010011 "
+1&
+b1100 '
+b11101011000010110010011 #
+b1100 !
+#95
+b0 %
+1&
+b0 #
+b0 '
+#105
+bx "
+x$
+b101100000011000010011 #
+b1110 !
+#115
+b100x0 !
+bx #
+b1101 '
+#125
+0&
+bx '
+bx !
+#1000

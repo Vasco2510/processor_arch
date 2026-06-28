@@ -1,0 +1,156 @@
+$date
+	Sun Jun 28 17:07:26 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 ! PCF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 " InstrF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 32 # InstrD [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ifs $end
+$var wire 1 $ IsCompressedF $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 % ALUResultE [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 & \rf[8] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 ' \rf[9] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 ( \rf[10] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_test_ls_rvc $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 ) \rf[11] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 )
+b0 (
+b0 '
+b0 &
+b0 %
+1$
+b0 #
+b1000001000000010000010011 "
+b0 !
+$end
+#25
+b11101001000010010010011 "
+b1000001000000010000010011 #
+b10 !
+#35
+b100101000010000000100011 "
+b10000 %
+b100 !
+b11101001000010010010011 #
+#45
+b1000010010100000011 "
+b111 %
+b100101000010000000100011 #
+b110 !
+#55
+b1000000010000000100010011 "
+b10000 %
+b1000 !
+b1000010010100000011 #
+#60
+b10000 &
+#65
+b10000 %
+b100000000010010010000100011 "
+b1000000010000000100010011 #
+b1010 !
+#70
+b111 '
+#75
+b10010010110000011 "
+b1100 !
+b100000000010010010000100011 #
+#85
+bx "
+x$
+b1011000 %
+b10010010110000011 #
+b1110 !
+#90
+b111 (
+#95
+b10000 %
+b100x0 !
+bx #
+#105
+bx %
+bx !
+#120
+b111 )
+#1000

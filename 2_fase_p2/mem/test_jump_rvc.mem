@@ -1,0 +1,10 @@
+// test_jump_rvc.mem
+// x8=5, x9=10, c.j jumps, c.jal calls, c.jr returns, x10=20
+0415
+A009
+041D
+04A9
+2009
+0551
+050D
+8082

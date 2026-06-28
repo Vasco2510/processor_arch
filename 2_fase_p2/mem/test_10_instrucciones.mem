@@ -1,0 +1,77 @@
+// Ejemplo de prueba que piden en el informe
+//  c.addi, c.add 
+// addi x8, x0, 10    -> x8 = 10
+// addi x9, x0, 3     -> x9 = 3
+// c.addi x8, 3       -> x8 = 13
+// c.add  x9, x8      -> x9 = 16
+//
+//  c.sub, c.and 
+// addi x10, x0, 20   -> x10 = 20
+// addi x11, x0, 7    -> x11 = 7
+// c.sub  x10, x11    -> x10 = 13
+// c.and  x10, x11    -> x10 = 5   (13=1101 & 7=0111 = 0101)
+//
+//  c.or, c.xor 
+// addi x12, x0, 12   -> x12 = 12  (1100)
+// addi x13, x0, 10   -> x13 = 10  (1010)
+// c.or   x12, x13    -> x12 = 14  (1100|1010=1110)
+// c.xor  x12, x13    -> x12 = 4   (1110^1010=0100)
+//
+//  c.slli, c.srli, c.srai 
+// addi x14, x0, 8    -> x14 = 8
+// c.slli x14, 2      -> x14 = 32  (8 << 2)
+// c.srli x14, 3      -> x14 = 4   (32 >> 3)
+// c.srai x14, 1      -> x14 = 2   (4 >> 1, aritmético)
+//
+//  c.lui 
+// c.lui  x15, 2      -> x15 = 8192 (2 << 12 = 0x2000)
+//
+//  Fin 
+// beq x0, x0, 0      -> loop infinito
+//
+// Resultados esperados: x8=13 x9=16 x10=5 x11=7 x12=4 x13=10 x14=2 x15=8192
+
+//  addi x8, x0, 10  (0x00A00413) 
+0413  // [low]
+00A0  // [high]
+//  addi x9, x0, 3   (0x00300493) 
+0493  // [low]
+0030  // [high]
+//  c.addi x8, 3  (0x040D) 
+040D
+//  c.add x9, x8  (0x94A2) 
+94A2
+//  addi x10, x0, 20  (0x01400513) 
+0513  // [low]
+0140  // [high]
+//  addi x11, x0, 7   (0x00700593) 
+0593  // [low]
+0070  // [high]
+//  c.sub x10, x11  (0x8D0D) 
+8D0D
+//  c.and x10, x11  (0x8D6D) 
+8D6D
+//  addi x12, x0, 12  (0x00C00613) 
+0613  // [low]
+00C0  // [high]
+//  addi x13, x0, 10  (0x00A00693) 
+0693  // [low]
+00A0  // [high]
+//  c.or  x12, x13  (0x8E55) 
+8E55
+//  c.xor x12, x13  (0x8E35) 
+8E35
+//  addi x14, x0, 8   (0x00800713) 
+0713  // [low]
+0080  // [high]
+//  c.slli x14, 2  (0x070A) 
+070A
+//  c.srli x14, 3  (0x830D) 
+830D
+//  c.srai x14, 1  (0x8705) 
+8705
+//  c.lui x15, 2   (0x6789) 
+6789
+//  beq x0, x0, 0  (0x00000063) 
+0063  // [low]
+0000  // [high]
