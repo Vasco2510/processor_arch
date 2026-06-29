@@ -1,0 +1,27 @@
+// test_clw_csw.mem — C.LW / C.SW focused (Quadrant 0, _p mapping)
+// Setup: todos los registros = 0 por regfile.v (initial)
+// x8=0 como base pointer, se usa implicitamente
+//
+// C.ADDI usa SignExt(imm) por lo que imm debe ser < 32 (6-bit signed)
+// Secuencia:
+//  0: C.ADDI x9, 10     → x9 = 10                          (0x04A9)
+//  2: C.SW   x9, 0(x8)  → mem[0] = 10                      (0xC004)
+//  4: C.LW   x10, 0(x8) → x10 = mem[0] = 10                (0x4008)
+//  6: C.SW   x9, 8(x8)  → mem[8] = 10                      (0xC404)
+//  8: C.LW   x11, 8(x8) → x11 = mem[8] = 10                (0x440C)
+// 10: C.ADDI x9, 15     → x9 = 25                           (0x04BD)
+// 12: C.SW   x9, 20(x8) → mem[20] = 25                     (0xC824)
+// 14: C.LW   x12, 20(x8)→ x12 = mem[20] = 25               (0x4830)
+// 16: C.LW   x13, 0(x8) → x13 = mem[0] = 10 (rd_p=x13)     (0x4014)
+// 18: beq x0, x0, 0     → loop infinito                    (0x00000063)
+04A9
+C004
+4008
+C404
+440C
+04BD
+C824
+4830
+4014
+0063
+0000
