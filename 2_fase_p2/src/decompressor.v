@@ -107,9 +107,9 @@ module decompressor (
                                    rd_f, 3'b001, rd_f, 7'b0010011};
                     end
                     3'b010: begin
-                        instr32 = {4'b0000, instr16[3:2], instr16[12], instr16[6:4], 2'b00,
-                                   5'b00010, 3'b010, rd_f, 7'b0000011};
-                    end
+                         instr32 = {5'b00000, instr16[5], instr16[12], instr16[4], instr16[3], instr16[6], 2'b00,
+                                    5'b00010, 3'b010, rd_f, 7'b0000011};
+                     end
                     3'b100: begin
                         if (!instr16[12]) begin
                             if (instr16[6:2] == 5'b00000) begin
@@ -128,11 +128,11 @@ module decompressor (
                         end
                     end
                     3'b110: begin
-                        instr32 = {4'b0000, instr16[8:7], instr16[12],
-                                   rs2_f, 5'b00010, 3'b010,
-                                   instr16[11:9], 2'b00,
-                                   7'b0100011};
-                    end
+                         instr32 = {4'b0000, instr16[12:10],
+                                    rs2_f, 5'b00010, 3'b010,
+                                    instr16[9:7], 2'b00,
+                                    7'b0100011};
+                     end
                     default: instr32 = 32'h00000013;
                 endcase
             end

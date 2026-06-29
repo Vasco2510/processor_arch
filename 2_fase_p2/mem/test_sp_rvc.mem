@@ -1,0 +1,29 @@
+// test_sp_rvc.mem — C.LWSP / C.SWSP (SP-relative load/store)
+// Setup: sp = x2 = 0 (por regfile initial)
+//
+// Secuencia:
+//  0: C.ADDI x8, 10       → x8 = 10                         (0x0415)
+//  2: C.SWSP x8, 0(sp)    → mem[0] = 10                     (0xC042)
+//  4: C.LWSP x9, 0(sp)    → x9 = mem[0] = 10               (0x4482)
+//  6: C.SWSP x8, 4(sp)    → mem[4] = 10                     (0xC142)
+//  8: C.LWSP x10, 4(sp)   → x10 = mem[4] = 10              (0x4542)
+// 10: C.ADDI x8, 15       → x8 = 25                         (0x041F)
+// 12: C.SWSP x8, 8(sp)    → mem[8] = 25                     (0xC242)
+// 14: C.LWSP x11, 8(sp)   → x11 = mem[8] = 25              (0x458A)
+// 16: C.SWSP x8, 20(sp)   → mem[20] = 25                    (0xC2A2)
+// 18: C.LWSP x12, 20(sp)  → x12 = mem[20] = 25             (0x4612)
+// 20: C.LWSP x13, 0(sp)   → x13 = mem[0] = 10              (0x4682)
+// 22: beq x0, x0, 0       → loop infinito                  (0x00000063)
+0415
+C042
+4482
+C142
+4542
+041F
+C242
+458A
+C2A2
+4612
+4682
+0063
+0000

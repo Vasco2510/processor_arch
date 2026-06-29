@@ -1,7 +1,7 @@
 module tb_test_clw_csw;
     reg clk, reset;
     top_pipe #(
-        .INSTR_MEM_FILE("mem/test_clw_csw.mem")
+        .INSTR_MEM_FILE("Z:/26-1/ARQUI/proy2/entrega2/2_fase_p2/mem/test_clw_csw.mem")
     ) dut (
         .clk(clk),
         .reset(reset)
@@ -28,7 +28,7 @@ module tb_test_clw_csw;
         $finish;
     end
     initial begin
-        $dumpfile("waveform/tb_test_clw_csw.vcd");
+        $dumpfile("Z:/26-1/ARQUI/proy2/entrega2/2_fase_p2/waveform/tb_test_clw_csw.vcd");
         $dumpvars(0, tb_test_clw_csw.dut.pipe.PCF);
         $dumpvars(0, tb_test_clw_csw.dut.pipe.InstrF);
         $dumpvars(0, tb_test_clw_csw.dut.pipe.InstrD);

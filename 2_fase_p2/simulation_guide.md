@@ -1,6 +1,6 @@
 # Simulation Guide — Testbenches
 
-12 testbenches en `tb/`. Cada uno carga su propio `.mem` y verifica resultados específicos.
+13 testbenches en `tb/`. Cada uno carga su propio `.mem` y verifica resultados específicos.
 
 ---
 
@@ -109,6 +109,14 @@
 - **PASS/FAIL**: No — dump de x8–x13 para revisión manual
 - **Señales dump**: PCF, InstrF, InstrD, IsCompressedF, ALUResultE, regs x8–x13
 
+## 13. `tb_test_sp_rvc` — C.LWSP / C.SWSP (SP-relative)
+
+- **Mem**: `mem/test_sp_rvc.mem`
+- **Duración**: 1000 ns
+- **Verifica**: C.LWSP y C.SWSP con inyección forzada de x2 (SP): offsets 0, 4, 8, 20; rd variando (x9–x13); rs2 fijo (x8)
+- **PASS/FAIL**: No — dump de x2, x8–x13 para revisión manual
+- **Señales dump**: PCF, InstrF, InstrD, IsCompressedF, ALUResultE, regs x2, x8–x13
+
 ---
 
 ## Cómo probar en Vivado
@@ -137,9 +145,10 @@ Para validación incremental, probar en este orden:
 | 4 | `tb_test_flushing` | Flushing correcto |
 | 5 | `tb_test_10_instrucciones` | 10 RVC básicas |
 | 6 | `tb_test_clw_csw` | C.LW / C.SW (_p mapping) |
-| 7 | `tb_test_ls_rvc` | Load/Store RVC (completo) |
-| 8 | `tb_test_branch_rvc` | Branch RVC |
-| 9 | `tb_test_jump_rvc` | Jump RVC |
-| 10 | `tb_test_isa_rvc` | Mezcla RV32I + RVC |
-| 11 | `tb_programa_rvc1` | Programa RVC puro |
-| 12 | `tb_programa_rvc2` | Programa mixto |
+| 7 | `tb_test_sp_rvc` | C.LWSP / C.SWSP (SP-relative) |
+| 8 | `tb_test_ls_rvc` | Load/Store RVC (completo) |
+| 9 | `tb_test_branch_rvc` | Branch RVC |
+| 10 | `tb_test_jump_rvc` | Jump RVC |
+| 11 | `tb_test_isa_rvc` | Mezcla RV32I + RVC |
+| 12 | `tb_programa_rvc1` | Programa RVC puro |
+| 13 | `tb_programa_rvc2` | Programa mixto |
