@@ -12,23 +12,23 @@ module decompressor (
     always @(*) begin
         case (instr16[1:0])
             2'b00: begin
-                case (instr16[15:13])
-                    3'b010: begin
+                case (instr16[15:13]) // evalua los 3 bits mas significativos
+                    3'b010: begin // corresponde a c.lw
                         instr32 = {5'b00000, instr16[5], instr16[12:10], instr16[6], 2'b00,
                                    rs1_p, 3'b010, rd_p, 7'b0000011};
                     end
-                    3'b110: begin
+                    3'b110: begin  // descarte:  es c.sw
                         instr32 = {5'b00000, instr16[5], instr16[12],
                                    rs2_p, rs1_p, 3'b010,
                                    instr16[11:10], instr16[6], 2'b00,
                                    7'b0100011};
-                    end
+                    end //cual es el proposito de la linea siguiente? ¿ xq hexadecimal?
                     default: instr32 = 32'h00000013;
                 endcase
             end
             2'b01: begin
                 case (instr16[15:13])
-                    3'b000: begin
+                    3'b000: begin 
                         instr32 = {{6{instr16[12]}}, instr16[12], instr16[6:2],
                                    rd_f, 3'b000, rd_f, 7'b0010011};
                     end
@@ -102,38 +102,38 @@ module decompressor (
             end
             2'b10: begin
                 case (instr16[15:13])
-                    3'b000: begin
+                    3'b000: begin // c.slli
                         instr32 = {7'b0000000, instr16[6:2],
                                    rd_f, 3'b001, rd_f, 7'b0010011};
                     end
-                    3'b010: begin
+                    3'b010: begin // aqui c.lwsp
                          instr32 = {5'b00000, instr16[5], instr16[12], instr16[4], instr16[3], instr16[6], 2'b00,
                                     5'b00010, 3'b010, rd_f, 7'b0000011};
                      end
-                    3'b100: begin
-                        if (!instr16[12]) begin
-                            if (instr16[6:2] == 5'b00000) begin
+                    3'b100: begin 
+                        if (!instr16[12]) begin // Camino cuando bit 12 es 0
+                            if (instr16[6:2] == 5'b00000) begin // .jr
                                 instr32 = {12'b0, rd_f, 3'b000, 5'b00000, 7'b1100111};
-                            end else begin
+                            end else begin // c.mv tenemos aqui
                                 instr32 = {7'b0000000, rs2_f, 5'b00000,
                                            3'b000, rd_f, 7'b0110011};
                             end
-                        end else begin
-                            if (instr16[6:2] == 5'b00000) begin
+                        end else begin //cuando bit 12 es =1
+                            if (instr16[6:2] == 5'b00000) begin //c.jalr
                                 instr32 = {12'b0, rd_f, 3'b000, 5'b00001, 7'b1100111};
-                            end else begin
+                            end else begin //c.add
                                 instr32 = {7'b0000000, rs2_f, rd_f,
                                            3'b000, rd_f, 7'b0110011};
                             end
                         end
                     end
-                    3'b110: begin
+                    3'b110: begin //tenemos c.swsp
                          instr32 = {4'b0000, instr16[12:10],
                                     rs2_f, 5'b00010, 3'b010,
                                     instr16[9:7], 2'b00,
                                     7'b0100011};
                      end
-                    default: instr32 = 32'h00000013;
+                    default: instr32 = 32'h00000013; //nop si es q otro bit entra por casualidad al circutio
                 endcase
             end
             default: instr32 = 32'h00000013;

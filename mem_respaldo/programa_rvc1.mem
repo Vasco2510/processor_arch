@@ -1,0 +1,8 @@
+0095  // c.addi x1, 5   -> x1 = 5
+010d  // c.addi x2, 3   -> x2 = 3
+908a  // c.add  x1, x2  -> x1 = 8
+0095  // c.addi x1, 5   -> x1 = 13
+010d  // c.addi x2, 3   -> x2 = 6
+908a  // c.add  x1, x2  -> x1 = 19
+0063  // beq x0, x0, 0  [low]  — infinite loop (32 bits)
+0000  //                [high]

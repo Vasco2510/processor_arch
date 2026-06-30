@@ -1,0 +1,9 @@
+0095  // c.addi x1, 5        -> x1 = 5        (16 bits, PC+2)
+0113  // addi x2, x0, 10    [low]             (32 bits, PC+4)
+00a0  //                    [high]
+908a  // c.add x1, x2       -> x1 = 15       (16 bits, PC+2)
+0193  // addi x3, x0, 15    [low]             (32 bits, PC+4)
+00f0  //                    [high]
+0095  // c.addi x1, 5       -> x1 = 20       (16 bits, PC+2)
+0063  // beq x0, x0, 0      [low]             (32 bits, PC+4)
+0000  //                    [high]

@@ -1,0 +1,9 @@
+// test_branch_rvc.mem
+// x8=1, x9=0, beqz x9 skips, bnez x8 skips, x12=1
+0405
+0481
+C091
+051D
+E011
+059D
+0605
