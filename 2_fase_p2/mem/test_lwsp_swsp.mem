@@ -1,0 +1,27 @@
+// test_waly_lwsp_swsp.mem — Waly: c.lwsp y c.swsp
+//
+// Programa:
+//   addi  x2,  x0, 32   → x2 = 32  (stack pointer apunta a dirección 32)
+//   addi  x9,  x0,  7   → x9 = 7   (valor a guardar)
+//   c.swsp x9, 0(x2)    → mem[32]  = 7   (store via SP)
+//   c.lwsp x10, 0(x2)   → x10 = mem[32] = 7 (load via SP)
+//   beq   x0,  x0,  0   → loop infinito (termina simulación)
+//
+// Resultados esperados:
+//   x2  = 32
+//   x9  =  7
+//   x10 =  7
+
+// addi x2, x0, 32   (0x02000113)
+0113
+0200
+// addi x9, x0, 7    (0x00700493)
+0493
+0070
+// c.swsp x9, 0(x2)  (0xC026)  — CSS format, rs2=x9, uimm=0, rs1 forzado a x2
+C026
+// c.lwsp x10, 0(x2) (0x4502)  — CI  format, rd=x10, uimm=0, rs1 forzado a x2
+4502
+// beq x0, x0, 0     (0x00000063)
+0063
+0000
