@@ -1,0 +1,48 @@
+// test_beqz_jalr.mem: 
+//
+// Programa:
+//   0x00: addi  x9, x0, 0       → x9 = 0   (valor que c.beqz prueba)
+//   0x04: addi  x8, x0, 5       → x8 = 5   (marcador de control)
+//   0x08: c.beqz x9, +4         → si x9==0, salta a 0x0C  [BRANCH TAKEN]
+//   0x0A: c.addi x8, 1          → DEAD CODE: si x8 se vuelve 6, el branch falló
+//   0x0C: addi  x10, x0, 24     → x10 = 24 = 0x18 (dirección destino para c.jalr)
+//   0x10: c.jalr x10            → salta a mem[24], x1 = PC+2 = 0x12  [JALR]
+//   0x12: c.addi x11, 1         → DEAD CODE: si x11 se vuelve 1, el jalr falló
+//   0x14: beq   x0, x0, 0       → no se alcanza
+//   0x18: addi  x12, x0, 77     → x12 = 77 (prueba que llegamos al destino de c.jalr)
+//   0x1C: beq   x0, x0, 0       → loop final
+
+// Resultados esperados:
+//   x1  = 18  (= 0x12, return address guardado por c.jalr)
+//   x8  = 5   (NO 6 → c.beqz tomó el salto correctamente)
+//   x9  = 0
+//   x10 = 24
+//   x11 = 0   (NO 1 → c.jalr tomó el salto correctamente)
+//   x12 = 77  (llegamos al destino de c.jalr)
+
+// addi x9, x0, 0   (0x00000493)
+0493
+0000
+// addi x8, x0, 5   (0x00500413)
+0413
+0050
+// c.beqz x9, +4    (0xC091)  — CB: rs1'=x9, offset=4, target=0x08+4=0x0C
+C091
+// c.addi x8, 1     (0x0405)  — DEAD CODE en 0x0A (RVC, 2 bytes)
+0405
+// addi x10, x0, 24 (0x01800513)  — 0x0C: destino del branch
+0513
+0180
+// c.jalr x10       (0x9502)  — CR: rs1=x10, rd=x1, target=x10=24=0x18
+9502
+// c.addi x11, 1    (0x0585)  — DEAD CODE en 0x12 (RVC, 2 bytes)
+0585
+// beq x0, x0, 0   (0x00000063)  — 0x14: no se alcanza
+0063
+0000
+// addi x12, x0, 77 (0x04D00613)  — 0x18: destino de c.jalr
+0613
+04D0
+// beq x0, x0, 0   (0x00000063)  — 0x1C: loop final
+0063
+0000

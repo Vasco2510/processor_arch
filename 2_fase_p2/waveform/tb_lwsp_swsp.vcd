@@ -1,0 +1,613 @@
+$date
+	Mon Jun 29 12:26:00 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 ! PCF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 " InstrF [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 32 # InstrD [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ifs $end
+$var wire 1 $ IsCompressedF $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 5 % Rs1D [4:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 & ImmExtD [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 ' ALUResultE [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 32 ( WriteDataM [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var wire 32 ) ReadDataM [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 1 * MemWriteM $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 32 + ALUResultM [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$var reg 2 , ResultSrcW [1:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 - \rf[2] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 . \rf[9] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module tb_waly_lwsp_swsp $end
+$scope module dut $end
+$scope module pipe $end
+$scope module ids $end
+$scope module rf $end
+$var reg 32 / \rf[10] [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+0*
+bx )
+b0 (
+b0 '
+b0 &
+b0 %
+0$
+b0 #
+b10000000000000000100010011 "
+b0 !
+$end
+#25
+b100000 &
+b11100000000010010010011 "
+b10000000000000000100010011 #
+b100 !
+#35
+1$
+b100100010010000000100011 "
+b111 &
+b100000 '
+b1000 !
+b11100000000010010010011 #
+#45
+b10010010100000011 "
+b111 '
+b0 &
+b10 %
+b100000 +
+b100100010010000000100011 #
+b1010 !
+#55
+b1100011 "
+0$
+b0 &
+b100000 '
+b1100 !
+b10010010100000011 #
+b111 +
+#60
+b100000 -
+#65
+b100000 '
+x$
+bx "
+b0 %
+1*
+b111 (
+b100000 +
+b1100011 #
+b10000 !
+#70
+b111 .
+#75
+b0 '
+bx &
+bx %
+b111 )
+b10xx0 !
+bx #
+0*
+b0 (
+#85
+0$
+b0 &
+b1100011 "
+bx )
+b0 %
+b1 ,
+b0 +
+b0 #
+b1100 !
+#90
+b111 /
+#95
+x$
+bx "
+b10000 !
+b1100011 #
+b0 ,
+#105
+bx &
+bx %
+bx #
+b10xx0 !
+#115
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#125
+x$
+bx "
+b1100011 #
+b10000 !
+#135
+bx &
+bx %
+b10xx0 !
+bx #
+#145
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#155
+x$
+bx "
+b10000 !
+b1100011 #
+#165
+bx &
+bx %
+bx #
+b10xx0 !
+#175
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#185
+x$
+bx "
+b1100011 #
+b10000 !
+#195
+bx &
+bx %
+b10xx0 !
+bx #
+#205
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#215
+x$
+bx "
+b10000 !
+b1100011 #
+#225
+bx &
+bx %
+bx #
+b10xx0 !
+#235
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#245
+x$
+bx "
+b1100011 #
+b10000 !
+#255
+bx &
+bx %
+b10xx0 !
+bx #
+#265
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#275
+x$
+bx "
+b10000 !
+b1100011 #
+#285
+bx &
+bx %
+bx #
+b10xx0 !
+#295
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#305
+x$
+bx "
+b1100011 #
+b10000 !
+#315
+bx &
+bx %
+b10xx0 !
+bx #
+#325
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#335
+x$
+bx "
+b10000 !
+b1100011 #
+#345
+bx &
+bx %
+bx #
+b10xx0 !
+#355
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#365
+x$
+bx "
+b1100011 #
+b10000 !
+#375
+bx &
+bx %
+b10xx0 !
+bx #
+#385
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#395
+x$
+bx "
+b10000 !
+b1100011 #
+#405
+bx &
+bx %
+bx #
+b10xx0 !
+#415
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#425
+x$
+bx "
+b1100011 #
+b10000 !
+#435
+bx &
+bx %
+b10xx0 !
+bx #
+#445
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#455
+x$
+bx "
+b10000 !
+b1100011 #
+#465
+bx &
+bx %
+bx #
+b10xx0 !
+#475
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#485
+x$
+bx "
+b1100011 #
+b10000 !
+#495
+bx &
+bx %
+b10xx0 !
+bx #
+#505
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#515
+x$
+bx "
+b10000 !
+b1100011 #
+#525
+bx &
+bx %
+bx #
+b10xx0 !
+#535
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#545
+x$
+bx "
+b1100011 #
+b10000 !
+#555
+bx &
+bx %
+b10xx0 !
+bx #
+#565
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#575
+x$
+bx "
+b10000 !
+b1100011 #
+#585
+bx &
+bx %
+bx #
+b10xx0 !
+#595
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#605
+x$
+bx "
+b1100011 #
+b10000 !
+#615
+bx &
+bx %
+b10xx0 !
+bx #
+#625
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#635
+x$
+bx "
+b10000 !
+b1100011 #
+#645
+bx &
+bx %
+bx #
+b10xx0 !
+#655
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#665
+x$
+bx "
+b1100011 #
+b10000 !
+#675
+bx &
+bx %
+b10xx0 !
+bx #
+#685
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#695
+x$
+bx "
+b10000 !
+b1100011 #
+#705
+bx &
+bx %
+bx #
+b10xx0 !
+#715
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#725
+x$
+bx "
+b1100011 #
+b10000 !
+#735
+bx &
+bx %
+b10xx0 !
+bx #
+#745
+0$
+b0 &
+b1100011 "
+b0 %
+b0 #
+b1100 !
+#755
+x$
+bx "
+b10000 !
+b1100011 #
+#765
+bx &
+bx %
+bx #
+b10xx0 !
+#775
+0$
+b1100011 "
+b0 &
+b0 %
+b1100 !
+b0 #
+#785
+x$
+bx "
+b1100011 #
+b10000 !
+#795
+bx &
+bx %
+b10xx0 !
+bx #
+#800
