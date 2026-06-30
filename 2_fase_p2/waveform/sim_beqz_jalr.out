@@ -12,18 +12,18 @@ v010CB4B8_0 .net "d1", 7 0, C4<zzzzzzzz>; 0 drivers
 v010CB2A8_0 .net "s", 0 0, C4<z>; 0 drivers
 v010CB670_0 .net "y", 7 0, L_011151B8; 1 drivers
 L_011151B8 .functor MUXZ 8, C4<zzzzzzzz>, C4<zzzzzzzz>, C4<z>, C4<>;
-S_010CF3F8 .scope module, "tb_valentino_beqz_jalr" "tb_valentino_beqz_jalr" 3 13;
+S_010CF3F8 .scope module, "tb_beqz_jalr" "tb_beqz_jalr" 3 13;
  .timescale 0 0;
 v01114978_0 .var "clk", 0 0;
 v011146B8_0 .var "reset", 0 0;
 S_010CEEA8 .scope module, "dut" "top_pipe" 3 19, 4 1, S_010CF3F8;
  .timescale 0 0;
-P_010D4524 .param/str "INSTR_MEM_FILE" 4 2, "mem/test_valentino_beqz_jalr.mem";
+P_010D4524 .param/str "INSTR_MEM_FILE" 4 2, "mem/test_beqz_jalr.mem";
 v01114710_0 .net "clk", 0 0, v01114978_0; 1 drivers
 v01114240_0 .net "reset", 0 0, v011146B8_0; 1 drivers
 S_010CEF30 .scope module, "pipe" "pipeline" 4 9, 5 1, S_010CEEA8;
  .timescale 0 0;
-P_010D48A4 .param/str "INSTR_MEM_FILE" 5 2, "mem/test_valentino_beqz_jalr.mem";
+P_010D48A4 .param/str "INSTR_MEM_FILE" 5 2, "mem/test_beqz_jalr.mem";
 v01113218_0 .net "ALUControlD", 3 0, v0110EBC0_0; 1 drivers
 v01112820_0 .var "ALUControlE", 3 0;
 v01113168_0 .net "ALUResultE", 31 0, L_01118D70; 1 drivers
@@ -100,7 +100,7 @@ L_01114F50 .part v011141E8_0, 0, 1;
 L_01115160 .cmp/ne 2, L_0111A028, C4<00>;
 S_010CDB88 .scope module, "ifs" "if_stage" 5 40, 6 1, S_010CEF30;
  .timescale 0 0;
-P_010D5444 .param/str "INSTR_MEM_FILE" 6 2, "mem/test_valentino_beqz_jalr.mem";
+P_010D5444 .param/str "INSTR_MEM_FILE" 6 2, "mem/test_beqz_jalr.mem";
 L_01116590 .functor BUFZ 32, L_01115210, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
 v01112108_0 .net "DecompInstrF", 31 0, v01112738_0; 1 drivers
 v01112268_0 .alias "InstrF", 31 0, v01112A88_0;
@@ -137,7 +137,7 @@ v01111EF8_0 .alias "reset", 0 0, v01114240_0;
 E_010D5740 .event posedge, v01110C78_0, v010D8B78_0;
 S_010CE490 .scope module, "im" "imem" 6 19, 8 1, S_010CDB88;
  .timescale 0 0;
-P_010D52A4 .param/str "MEM_FILE" 8 2, "mem/test_valentino_beqz_jalr.mem";
+P_010D52A4 .param/str "MEM_FILE" 8 2, "mem/test_beqz_jalr.mem";
 v01111FA8 .array "RAM", 127 0, 15 0;
 v01111D98_0 .net *"_s2", 15 0, L_01115528; 1 drivers
 v01111E48_0 .net *"_s4", 6 0, C4<0000001>; 1 drivers
@@ -2447,7 +2447,7 @@ T_17.1 ;
     .thread T_17;
     .scope S_010CF3F8;
 T_18 ;
-    %vpi_call 3 66 "$dumpfile", "waveform/tb_valentino_beqz_jalr.vcd";
+    %vpi_call 3 66 "$dumpfile", "waveform/tb_beqz_jalr.vcd";
     %vpi_call 3 69 "$dumpvars", 1'sb0, v01112B38_0;
     %vpi_call 3 70 "$dumpvars", 1'sb0, v01113378_0;
     %vpi_call 3 71 "$dumpvars", 1'sb0, v01112A88_0;
@@ -2472,7 +2472,7 @@ T_18 ;
     "N/A";
     "<interactive>";
     "src/mux2.v";
-    "tb/tb_valentino_beqz_jalr.v";
+    "tb/tb_beqz_jalr.v";
     "src/top_pipe.v";
     "src/pipeline.v";
     "src/if_stage.v";
